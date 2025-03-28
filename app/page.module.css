@@ -1,0 +1,167 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  perspective: 1000px;
+}
+
+.cardWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: calc(100dvh - 2rem);
+  margin: 0 auto; /* center horizontally */
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.card {
+  background: #fefaf2;
+  padding: 4rem 2rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.profileImage {
+  border-radius: 50%;
+}
+
+.name {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.8rem;
+  color: #084955;
+  font-family: var(--font-fonseca-medium);
+}
+
+.title {
+  font-size: 1rem;
+  color: #6cac9f;
+  font-family: var(--font-fonseca-thin);
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  color: #16545e;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.card h2 {
+  font-size: 1rem;
+  color: #084955;
+  font-family: var(--font-fonseca-medium);
+}
+
+.articles {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.articleItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1rem;
+  color: #084955;
+  font-size: 1rem;
+  padding: 0.25rem 0;
+}
+
+.readButton {
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+  background-color: #fc6415;
+  color: #f6f4f0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.flipSection {
+  text-align: right;
+}
+
+.flipButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.6rem 1.2rem;
+  background-color: transparent;
+  color: #084955;
+  border: none;
+  font-size: 0.9rem;
+  font-family: var(--font-inter);
+  cursor: pointer;
+  text-align: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.iconWrap svg {
+  width: 20px;
+  height: 20px;
+  stroke: #084955;
+}
+
+.connect {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.connectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #084955;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.connectLink:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  display: inline-block;
+}
+
+@media (max-height: 700px) {
+  .profileImage {
+    height: 100px;
+    width: 100px;
+  }
+}
