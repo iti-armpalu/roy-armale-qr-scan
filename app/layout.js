@@ -1,5 +1,7 @@
-import { Poiret_One, Josefin_Sans, Inter } from "next/font/google";
+import { Josefin_Sans, Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from '@vercel/analytics/next';
+
 import "./globals.css";
 
 // If loading a variable font, you don't need to specify the font weight
@@ -46,6 +48,7 @@ export default function RootLayout({ children }) {
         className={`${josefinSans.variable} ${inter.variable} ${fonsecaMedium.variable} ${fonsecaLight.variable} ${fonsecaThin.variable}`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
