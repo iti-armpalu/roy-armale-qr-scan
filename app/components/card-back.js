@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import Flip from "./flip";
 import Connect from "./connect";
 import styles from "../page.module.css";
+import { logArticleClick } from "../utils/log-article-click";
 
 export default function CardBack({ setFlipped, articles, videos }) {
   return (
@@ -16,9 +16,14 @@ export default function CardBack({ setFlipped, articles, videos }) {
           {articles.map((article, idx) => (
             <div key={idx} className={styles.articleItem}>
               <span>{article.title}</span>
-              <Link href={article.url} target="_blank">
+              <a
+                href={article.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => logArticleClick(article.title, "back")}
+              >
                 <button className={styles.readButton}>Read</button>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
@@ -28,9 +33,14 @@ export default function CardBack({ setFlipped, articles, videos }) {
           {videos.map((video, idx) => (
             <div key={idx} className={styles.articleItem}>
               <span>{video.title}</span>
-              <Link href={video.url} target="_blank">
+              <a
+                href={video.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => logArticleClick(video.title, "back")}
+              >
                 <button className={styles.readButton}>Watch</button>
-              </Link>
+              </a>
             </div>
           ))}
         </div>

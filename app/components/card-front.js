@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import Flip from "./flip";
 import Connect from "./connect";
 import styles from "../page.module.css";
+import { logArticleClick } from "../utils/log-article-click";
 
 export default function CardFront({ setFlipped, articles }) {
   return (
@@ -38,13 +38,14 @@ export default function CardFront({ setFlipped, articles }) {
           {articles.map((article, idx) => (
             <div key={idx} className={styles.articleItem}>
               <span>{article.title}</span>
-              <Link
+              <a
                 href={article.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => logArticleClick(article.title, "front")}
               >
                 <button className={styles.readButton}>Read</button>
-              </Link>
+              </a>
             </div>
           ))}
         </div>
