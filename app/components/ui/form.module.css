@@ -23,4 +23,6 @@
   outline: none;
   background-color: transparent;
   border-bottom: 1px solid #ddd;
+  -moz-appearance: none;
+  appearance: none;
 }

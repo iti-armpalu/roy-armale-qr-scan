@@ -2,13 +2,16 @@
   Layout & Container
 ---------------------------------------- */
 .container {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   min-height: 100dvh;
   background-color: #f4f4f4;
   padding: 1rem;
   perspective: 1000px;
+
+  /* overflow-y: auto; */
+
 }
 
 .cardWrapper {
@@ -34,7 +37,7 @@
 ---------------------------------------- */
 .card {
   background: #fefaf2;
-  padding: 4rem 2rem 2rem;
+  padding: 2rem 2rem 2rem;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
   text-align: center;
@@ -47,7 +50,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
   overflow-y: scroll;
+  /* overflow-y: visible; */
+
 }
 
 .front {
@@ -97,6 +103,7 @@
 
 .articles {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   text-align: left;
 }
 
@@ -126,19 +133,17 @@
   Flip Button
 ---------------------------------------- */
 .flipSection {
-  text-align: right;
+    /* margin-top: 2rem; */
+  text-align: center;
 }
 
 .flipButton {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 0.6rem 1.2rem;
+  position: relative;
   background-color: transparent;
-  color: #084955;
+  color: #6cac9f;
   border: none;
   font-size: 0.9rem;
-  font-family: var(--font-inter);
+  font-family: var(--font-fonseca-thin);
   cursor: pointer;
   text-align: right;
   display: inline-flex;
@@ -149,14 +154,14 @@
 .iconWrap svg {
   width: 20px;
   height: 20px;
-  stroke: #084955;
+  stroke: #6cac9f;
 }
 
 /* ---------------------------------------
   Connect Section
 ---------------------------------------- */
 .connect {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   text-align: center;
 }
 
@@ -190,16 +195,18 @@
 .surveyToggle {
   background: none;
   border: none;
-  font-size: 1rem;
-  font-family: var(--font-inter);
+  font-size: 0.9rem;
+  /* font-family: var(--font-inter); */
   cursor: pointer;
-  color: #084955;
+  /* color: #084955; */
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   text-align: left;
+  color: #6cac9f;
+  font-family: var(--font-fonseca-thin);
 }
 
 .surveyWrapper {
@@ -261,7 +268,7 @@
   transform: translate(-50%, -50%);
   width: 20px;
   height: 2px;
-  background: #084955;
+  background: #6cac9f;
   border-radius: 3px;
   transition: all 0.5s ease;
 }
@@ -273,7 +280,7 @@
   transform: translate(-50%, -50%);
   width: 2px;
   height: 20px;
-  background: #084955;
+  background: #6cac9f;
   border-radius: 3px;
   transition: all 0.5s ease;
 }
@@ -309,9 +316,9 @@
 /* ---------------------------------------
   Media Queries
 ---------------------------------------- */
-@media (max-height: 700px) {
+/* @media (max-height: 700px) {
   .profileImage {
     height: 100px;
     width: 100px;
   }
-}
+} */

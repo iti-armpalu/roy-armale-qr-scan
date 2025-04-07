@@ -10,8 +10,6 @@ export default function CardFront({ setFlipped, articles }) {
   return (
     <div className={`${styles.card} ${styles.front}`}>
       <div>
-        <Flip onClick={() => setFlipped(true)}>Explore more resources</Flip>
-
         <Image
           src="/roy-armale.jpg"
           alt="Roy Armale"
@@ -49,9 +47,13 @@ export default function CardFront({ setFlipped, articles }) {
             </div>
           ))}
         </div>
+        <Flip onClick={() => setFlipped(true)}>Explore more resources</Flip>
       </div>
 
-      <Connect />
+      <div>
+       
+        <Connect />
+      </div>
     </div>
   );
 }
