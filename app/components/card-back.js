@@ -27,22 +27,25 @@ export default function CardBack({ setFlipped, articles, videos }) {
             </div>
           ))}
         </div>
-        <div className={styles.articles}>
-          <h2>Videos</h2>
-          {videos.map((video, idx) => (
-            <div key={idx} className={styles.articleItem}>
-              <span>{video.title}</span>
-              <a
-                href={video.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => logArticleClick(video.title, "back")}
-              >
-                <button className={styles.readButton}>Watch</button>
-              </a>
-            </div>
-          ))}
-        </div>
+        {videos.length > 0 && (
+          <div className={styles.articles}>
+            <h2>Videos</h2>
+            {videos.map((video, idx) => (
+              <div key={idx} className={styles.articleItem}>
+                <span>{video.title}</span>
+                <a
+                  href={video.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => logArticleClick(video.title, "back")}
+                >
+                  <button className={styles.readButton}>Watch</button>
+                </a>
+              </div>
+            ))}
+          </div>
+        )}
+
         <Survey />
       </div>
       <Connect />
