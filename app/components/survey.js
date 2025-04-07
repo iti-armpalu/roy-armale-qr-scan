@@ -14,7 +14,7 @@ export default function Survey() {
     e.preventDefault();
     setLoading(true);
 
-    const url = new URL(process.env.NEXT_PUBLIC_LOG_SHEET_URL);
+    const url = new URL(process.env.LOG_SHEET_URL);
     url.searchParams.set("type", "survey");
     url.searchParams.set("name", name);
     url.searchParams.set("email", email);
