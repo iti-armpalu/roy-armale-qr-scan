@@ -9,7 +9,9 @@ import { logArticleClick } from "../utils/log-article-click";
 export default function CardFront({ setFlipped, articles }) {
   return (
     <div className={`${styles.card} ${styles.front}`}>
-      <div>
+       <div className={styles.cardContent}>
+
+       <div>
         <Image
           src="/roy-armale.jpg"
           alt="Roy Armale"
@@ -54,6 +56,8 @@ export default function CardFront({ setFlipped, articles }) {
        
         <Connect />
       </div>
+       </div>
+   
     </div>
   );
 }
