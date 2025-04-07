@@ -35,7 +35,7 @@ export default function Survey() {
           </div>
         </button>
 
-        <div
+        {/* <div
           className={`${styles.surveyFormWrap} ${
             expanded ? styles.expanded : styles.collapsed
           }`}
@@ -49,7 +49,7 @@ export default function Survey() {
               expanded && <Form onSubmit={() => setSubmitted(true)} />
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
