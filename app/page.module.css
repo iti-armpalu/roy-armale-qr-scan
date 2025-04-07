@@ -1,3 +1,6 @@
+/* ---------------------------------------
+  Layout & Container
+---------------------------------------- */
 .container {
   display: flex;
   justify-content: center;
@@ -26,6 +29,9 @@
   transform: rotateY(180deg);
 }
 
+/* ---------------------------------------
+  Card Front & Back
+---------------------------------------- */
 .card {
   background: #fefaf2;
   padding: 4rem 2rem 2rem;
@@ -52,6 +58,9 @@
   transform: rotateY(180deg);
 }
 
+/* ---------------------------------------
+  Profile Details
+---------------------------------------- */
 .profileImage {
   border-radius: 50%;
 }
@@ -77,6 +86,9 @@
   text-align: left;
 }
 
+/* ---------------------------------------
+  Articles & Links
+---------------------------------------- */
 .card h2 {
   font-size: 1rem;
   color: #084955;
@@ -110,6 +122,9 @@
   cursor: pointer;
 }
 
+/* ---------------------------------------
+  Flip Button
+---------------------------------------- */
 .flipSection {
   text-align: right;
 }
@@ -137,6 +152,9 @@
   stroke: #084955;
 }
 
+/* ---------------------------------------
+  Connect Section
+---------------------------------------- */
 .connect {
   margin-top: 2rem;
   text-align: center;
@@ -160,6 +178,9 @@
   display: inline-block;
 }
 
+/* ---------------------------------------
+  Survey Section & Toggle
+---------------------------------------- */
 .surveySection {
   margin-top: 3rem;
   text-align: left;
@@ -206,33 +227,21 @@
   margin: 0;
 }
 
-.surveyForm input {
-  display: block;
-  width: 100%;
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  font-family: var(--font-inter);
-  border: none;
-  outline: none;
-  background-color: transparent;
-  border-bottom: 1px solid #ddd;
+.surveyInner {
+  transition: opacity 0.4s ease;
 }
-
-
 
 .surveyThanks {
+  font-weight: 500;
   color: #084955;
-  text-align: left;
-
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem 0;
 }
 
-@media (max-height: 700px) {
-  .profileImage {
-    height: 100px;
-    width: 100px;
-  }
-}
-
+/* ---------------------------------------
+  Expand Icon Animation
+---------------------------------------- */
 .iconSurvey.active {
   background: transparent;
 }
@@ -277,18 +286,9 @@
   transition: all 0.5s ease;
 }
 
-.surveyInner {
-  transition: opacity 0.4s ease;
-}
-
-.surveyThanks {
-  font-weight: 500;
-  color: #084955;
-  font-size: 1rem;
-  text-align: center;
-  padding: 1rem 0;
-}
-
+/* ---------------------------------------
+  Fade Animation
+---------------------------------------- */
 .fadeIn {
   animation: animateIn 0.6s ease-out;
 }
@@ -303,5 +303,15 @@
     opacity: 1;
     transform: translateY(0%);
     visibility: visible;
+  }
+}
+
+/* ---------------------------------------
+  Media Queries
+---------------------------------------- */
+@media (max-height: 700px) {
+  .profileImage {
+    height: 100px;
+    width: 100px;
   }
 }

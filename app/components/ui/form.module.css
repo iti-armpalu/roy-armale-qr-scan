@@ -1,0 +1,26 @@
+.fieldGroup {
+  margin-bottom: 1rem;
+}
+
+.errorText {
+  color: #c0392b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.errorInput {
+  border: 1px solid #c0392b;
+  background-color: #fff6f6;
+}
+
+.surveyForm input {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  font-family: var(--font-inter);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ddd;
+}
