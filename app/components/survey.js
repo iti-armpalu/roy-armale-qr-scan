@@ -4,7 +4,7 @@ import styles from "../page.module.css";
 import Form from "./ui/form";
 
 export default function Survey() {
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
   const [submitted, setSubmitted] = useState(false);
 
   // Automatically reset submission state after 5 seconds
@@ -23,7 +23,7 @@ export default function Survey() {
       <div className={styles.surveyWrapper}>
         <button
           className={styles.surveyToggle}
-          onClick={() => setExpanded(!expanded)}
+          // onClick={() => setExpanded(!expanded)}
         >
           Register your interest to participate in a survey
           <div
