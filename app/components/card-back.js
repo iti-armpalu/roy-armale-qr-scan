@@ -4,6 +4,7 @@ import Flip from "./flip";
 import Connect from "./connect";
 import styles from "../page.module.css";
 import { logArticleClick } from "../utils/log-article-click";
+import Survey from "./survey";
 
 export default function CardBack({ setFlipped, articles, videos }) {
   return (
@@ -44,7 +45,9 @@ export default function CardBack({ setFlipped, articles, videos }) {
             </div>
           ))}
         </div>
+        <Survey />
       </div>
+
 
       <Connect />
     </div>
