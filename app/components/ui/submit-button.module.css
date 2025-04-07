@@ -1,8 +1,10 @@
 .btn {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
   background: #084955;
-  color: white;
+  color: #fefaf2;
   border: none;
   border-radius: 15px;
   cursor: pointer;

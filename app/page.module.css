@@ -64,6 +64,13 @@
   transform: rotateY(180deg);
 }
 
+.cardContent {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* iOS magic */
+  padding-bottom: 2rem; /* so you can scroll past bottom */
+}
+
 /* ---------------------------------------
   Profile Details
 ---------------------------------------- */
