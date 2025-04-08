@@ -35,11 +35,11 @@ export default function HomePage() {
   ];
 
   const videos = [
-    {
-      title: "CMO Summit: AI and The Future of Creativity",
-      url: "https://www.youtube.com/watch?v=ZJTX6GgUPcw",
-      isFeatured: false,
-    },
+    // {
+    //   title: "CMO Summit: AI and The Future of Creativity",
+    //   url: "https://www.youtube.com/watch?v=ZJTX6GgUPcw",
+    //   isFeatured: false,
+    // },
   ];
 
   return (
