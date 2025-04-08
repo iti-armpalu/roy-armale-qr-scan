@@ -1,12 +1,25 @@
 "use client";
 
 import styles from "./page.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import CardFront from "./components/card-front";
 import CardBack from "./components/card-back";
+import Image from "next/image";
 
 export default function HomePage() {
   const [flipped, setFlipped] = useState(false);
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    if (cardRef.current) {
+      gsap.to(cardRef.current, {
+        rotateY: flipped ? 180 : 0,
+        duration: 0.8,
+        ease: "power2.inOut",
+      });
+    }
+  }, [flipped]);
 
   const articles = [
     {
@@ -22,23 +35,30 @@ export default function HomePage() {
   ];
 
   const videos = [
-    // {
-    //   title: "CMO Summit: AI and The Future of Creativity",
-    //   url: "https://www.youtube.com/watch?v=ZJTX6GgUPcw",
-    //   isFeatured: false,
-    // }
+    {
+      title: "CMO Summit: AI and The Future of Creativity",
+      url: "https://www.youtube.com/watch?v=ZJTX6GgUPcw",
+      isFeatured: false,
+    },
   ];
 
   return (
     <main className={styles.container}>
-      <div className={`${styles.cardWrapper} ${flipped ? styles.flipped : ""}`}>
-        {/* FRONT SIDE */}
-        <CardFront
-          setFlipped={setFlipped}
-          articles={articles.filter((a) => a.isFeatured)}
-        />
-        {/* BACK SIDE */}
-        <CardBack setFlipped={setFlipped} articles={articles} videos={videos} />
+      <div className={styles.cardWrapper}>
+        <div className={styles.cardContainer} ref={cardRef}>
+          {/* FRONT SIDE */}
+          <CardFront
+            setFlipped={setFlipped}
+            articles={articles.filter((a) => a.isFeatured)}
+          />
+  
+          {/* BACK SIDE */}
+          <CardBack
+            setFlipped={setFlipped}
+            articles={articles}
+            videos={videos}
+          />
+        </div>
       </div>
     </main>
   );
