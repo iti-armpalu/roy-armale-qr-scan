@@ -46,8 +46,9 @@
 }
 
 .back {
-  z-index: 1;
   transform: rotateY(180deg);
+  overflow: hidden; /* still needs this to wrap scrollable area */
+  z-index: 1;
 }
 
 .scrollContainer {
